@@ -75,7 +75,7 @@ class LrCulture
 
   # ここはあとでリファクタリング・・・微妙なので・・・
   def head
-    "[culture]"
+    ""
   end
 
   def random_select
