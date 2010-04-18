@@ -84,7 +84,7 @@ class LrCulture
 
   # ポストする範囲を指定する
   def select
-    @select = rand(47)
+    @select = rand(80)
   end
 end
 
