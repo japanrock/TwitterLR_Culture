@@ -54,4 +54,3 @@ url      = lr_culture.selected_culture["url"]
 contents = lr_culture.selected_culture["contents"]
 
 twitter_oauth.post(head + contents + " - " + url)
-puts head + contents + " - " + url
