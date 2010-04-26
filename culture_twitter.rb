@@ -12,14 +12,14 @@ require 'kconv'
 require File.dirname(__FILE__) + '/twitter_oauth'
 
 # Usage:
-#  1. ¤³¤Î¥Õ¥¡¥¤¥ë¤ÈÆ±¤¸¥Ç¥£¥ì¥¯¥È¥ê¤Ë°Ê²¼£³¤Ä¤Î¥Õ¥¡¥¤¥ë¤òÀßÃÖ¤·¤Ş¤¹¡£
+#  1. ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã¨åŒã˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ä»¥ä¸‹ï¼“ã¤ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¨­ç½®ã—ã¾ã™ã€‚
 #   * twitter_oauth.rb
 #    * http://github.com/japanrock/TwitterTools/blob/master/twitter_oauth.rb
 #   * sercret_key.yml 
 #    * http://github.com/japanrock/TwitterTools/blob/master/secret_keys.yml.example
 #   * culture.yml
 #    * http://github.com/japanrock/TwitterLR_Culture/blob/master/culture.yml
-#  2. ¤³¤Î¥Õ¥¡¥¤¥ë¤ò¼Â¹Ô¤·¤Ş¤¹¡£
+#  2. ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 #   ruby lrhert_twitter.rb
 
 class LrCulture
@@ -27,7 +27,7 @@ class LrCulture
   attr_reader :select
 
   def initialize
-    # ¥«¥ì¥ó¥È¥Ç¥£¥ì¥¯¥È¥ê¤Î culture.yml ¤ò¥í¡¼¥É¤·¤Ş¤¹
+    # ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã® culture.yml ã‚’ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™
     @culture = YAML.load_file(File.dirname(__FILE__) + '/culture.yml')
   end
 
@@ -39,7 +39,7 @@ class LrCulture
     @selected_culture = @culture[select]
   end
 
-  # ¥İ¥¹¥È¤¹¤ëÈÏ°Ï¤ò»ØÄê¤¹¤ë
+  # ãƒã‚¹ãƒˆã™ã‚‹ç¯„å›²ã‚’æŒ‡å®šã™ã‚‹
   def select
     @select = rand(80)
   end
