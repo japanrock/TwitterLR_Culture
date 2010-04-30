@@ -10,6 +10,7 @@ require 'yaml'
 require 'parsedate'
 require 'kconv'
 require File.dirname(__FILE__) + '/twitter_oauth'
+require File.dirname(__FILE__) + '/shorten_url'
 
 # Usage:
 #  1. このファイルと同じディレクトリに以下３つのファイルを設置します。
@@ -47,10 +48,14 @@ end
 
 twitter_oauth = TwitterOauth.new
 lr_culture    = LrCulture.new
+shorten_url   = ShortenURL.new
 
 content  = lr_culture.random_select
 head     = lr_culture.head
 url      = lr_culture.selected_culture["url"]
 contents = lr_culture.selected_culture["contents"]
+# URL短縮
+shorten_url.get_short_url(url)
+short_url = shorten_url.short_url
 
-twitter_oauth.post(head + contents + " - " + url)
+twitter_oauth.post(head + contents + " - " + short_url)
