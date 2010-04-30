@@ -13,15 +13,19 @@ require File.dirname(__FILE__) + '/twitter_oauth'
 require File.dirname(__FILE__) + '/shorten_url'
 
 # Usage:
-#  1. このファイルと同じディレクトリに以下３つのファイルを設置します。
+#  1. このファイルと同じディレクトリに以下5つのファイルを設置します。
 #   * twitter_oauth.rb
 #    * http://github.com/japanrock/TwitterTools/blob/master/twitter_oauth.rb
 #   * sercret_key.yml 
 #    * http://github.com/japanrock/TwitterTools/blob/master/secret_keys.yml.example
 #   * culture.yml
 #    * http://github.com/japanrock/TwitterLR_Culture/blob/master/culture.yml
+#   * shorten_url.rb
+#    * http://github.com/japanrock/TwitterTools/blob/master/shorten_url.rb
+#   * bit_ly_api_key.yml
+#    * http://github.com/japanrock/TwitterTools/blob/master/bit_ly_api_key.yml
 #  2. このファイルを実行します。
-#   ruby lrhert_twitter.rb
+#   ruby culture_twitter.rb
 
 class LrCulture
   attr_reader :selected_culture
